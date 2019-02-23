@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>反向代理和负载均衡 | WebMIS文档</title>
+    <meta name="description" content="WebMIS基于MVC框架开发的多用户、多权限开源解决方案，整合了Jquery、CodeMirror、TinyMCE、Chart等插件！">
+    <link rel="icon" href="/img/favicon.png">
+    
+    <link rel="preload" href="/assets/css/0.styles.4b94f6ee.css" as="style"><link rel="preload" href="/assets/js/app.bdae1179.js" as="script"><link rel="preload" href="/assets/js/9.5a41f4a6.js" as="script"><link rel="prefetch" href="/assets/js/10.a879d652.js"><link rel="prefetch" href="/assets/js/11.7f59ed00.js"><link rel="prefetch" href="/assets/js/12.1afa1544.js"><link rel="prefetch" href="/assets/js/13.87cff79d.js"><link rel="prefetch" href="/assets/js/2.b60a0c5f.js"><link rel="prefetch" href="/assets/js/3.b3f7c661.js"><link rel="prefetch" href="/assets/js/4.839be1dd.js"><link rel="prefetch" href="/assets/js/5.db2912be.js"><link rel="prefetch" href="/assets/js/6.436758b7.js"><link rel="prefetch" href="/assets/js/7.daa96e89.js"><link rel="prefetch" href="/assets/js/8.7187917d.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.4b94f6ee.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">WebMIS文档</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">主页</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">文档</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux/" class="nav-link router-link-active">Linux文档</a></li><li class="dropdown-item"><!----> <a href="/php/" class="nav-link">PHP文档</a></li><li class="dropdown-item"><!----> <a href="/web/" class="nav-link">Web</a></li></ul></div></div><div class="nav-item"><a href="https://www.github.com/webmiss" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">主页</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">文档</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux/" class="nav-link router-link-active">Linux文档</a></li><li class="dropdown-item"><!----> <a href="/php/" class="nav-link">PHP文档</a></li><li class="dropdown-item"><!----> <a href="/web/" class="nav-link">Web</a></li></ul></div></div><div class="nav-item"><a href="https://www.github.com/webmiss" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading open"><span>Shell文档</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/linux/shell/base.html" class="sidebar-link">Shell基础</a></li><li><a href="/linux/shell/tools.html" class="sidebar-link">常用工具</a></li><li><a href="/linux/shell/mysql.html" class="sidebar-link">MariaDB数据库</a></li><li><a href="/linux/shell/docker.html" class="sidebar-link">Docker容器</a></li><li><a href="/linux/shell/nginx.html" class="active sidebar-link">Nginx负载均衡</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/linux/shell/nginx.html#反向代理和负载均衡" class="sidebar-link">反向代理和负载均衡</a></li><li class="sidebar-sub-header"><a href="/linux/shell/nginx.html#配置主web服务器" class="sidebar-link">配置主WEB服务器</a></li><li class="sidebar-sub-header"><a href="/linux/shell/nginx.html#脚本测试" class="sidebar-link">脚本测试</a></li></ul></li><li><a href="/linux/shell/redis.html" class="sidebar-link">Redis消息列队</a></li></ul></div></li></ul> </div> <div class="page"> <div class="content"><h2 id="反向代理和负载均衡"><a href="#反向代理和负载均衡" aria-hidden="true" class="header-anchor">#</a> 反向代理和负载均衡</h2> <p>使用代理服务器可以将请求转发给内部的Web服务器，使用这种加速模式显然可以提升静态网页的访问速度。因此也可以考虑使用这种技术，让代理服务器将请求均匀转发给多台内部Web服务器之一上，从而达到负载均衡的目的。这种代理方式与普通的代理方式有所不同，标准代理方式是客户使用代理访问多个外部Web服务器，而这种代理方式是多个客户使用它访问内部Web服务器，因此也被称为反向代理模式。</p> <h2 id="配置主web服务器"><a href="#配置主web服务器" aria-hidden="true" class="header-anchor">#</a> 配置主WEB服务器</h2> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">vi</span> /home/vhosts/default.conf
+</code></pre></div><p><strong>配置内容</strong></p> <div class="language-nginx extra-class"><pre class="language-nginx"><code><span class="token comment"># 设定负载均衡的服务器列表</span>
+<span class="token keyword">upstream</span> webservice <span class="token punctuation">{</span>
+    <span class="token comment"># weight为权重值</span>
+    <span class="token keyword">server</span> <span class="token number">127.0</span><span class="token number">.0</span><span class="token number">.1</span><span class="token punctuation">:</span><span class="token number">8081</span> weight<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">;</span>
+    <span class="token keyword">server</span> <span class="token number">127.0</span><span class="token number">.0</span><span class="token number">.1</span><span class="token punctuation">:</span><span class="token number">8082</span> weight<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">;</span>
+    <span class="token keyword">server</span> <span class="token number">127.0</span><span class="token number">.0</span><span class="token number">.1</span><span class="token punctuation">:</span><span class="token number">8083</span> weight<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">server</span> <span class="token punctuation">{</span>
+    <span class="token keyword">listen</span>       <span class="token number">80</span> default_server<span class="token punctuation">;</span>
+    <span class="token keyword">server_name</span>  localhost<span class="token punctuation">;</span>
+    <span class="token keyword">root</span> <span class="token operator">/</span>home<span class="token operator">/</span>www<span class="token operator">/</span><span class="token punctuation">;</span>
+    <span class="token keyword">index</span> <span class="token keyword">index</span><span class="token punctuation">.</span>php<span class="token punctuation">;</span>
+
+    <span class="token keyword">charset</span> utf<span class="token operator">-</span><span class="token number">8</span><span class="token punctuation">;</span>
+    <span class="token comment">#access_log  /var/log/nginx/host.access.log  main;</span>
+
+    <span class="token keyword">location</span> <span class="token operator">/</span> <span class="token punctuation">{</span>
+        <span class="token comment"># 反向代理</span>
+        <span class="token keyword">proxy_pass</span>  <span class="token keyword">http</span><span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>webservice<span class="token punctuation">;</span>
+        <span class="token comment"># 相关配置</span>
+        <span class="token keyword">proxy_redirect</span>     off<span class="token punctuation">;</span>
+        <span class="token keyword">proxy_set_header</span>   Host             <span class="token variable">$host</span><span class="token punctuation">;</span>
+        <span class="token keyword">proxy_set_header</span>   X<span class="token operator">-</span>Real<span class="token operator">-</span>IP        <span class="token variable">$remote_addr</span><span class="token punctuation">;</span>
+        <span class="token keyword">proxy_set_header</span>   X<span class="token operator">-</span>Forwarded<span class="token operator">-</span>For  <span class="token variable">$proxy_add_x_forwarded_for</span><span class="token punctuation">;</span>
+        <span class="token keyword">proxy_next_upstream</span> error <span class="token keyword">timeout</span> invalid_header http_500 http_502 http_503 http_504<span class="token punctuation">;</span>
+        <span class="token keyword">proxy_max_temp_file_size</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token keyword">proxy_connect_timeout</span>      <span class="token number">90</span><span class="token punctuation">;</span>
+        <span class="token keyword">proxy_send_timeout</span>         <span class="token number">90</span><span class="token punctuation">;</span>
+        <span class="token keyword">proxy_read_timeout</span>         <span class="token number">90</span><span class="token punctuation">;</span>
+        <span class="token keyword">proxy_buffer_size</span>          <span class="token number">4</span>k<span class="token punctuation">;</span>
+        <span class="token keyword">proxy_buffers</span>              <span class="token number">4</span> <span class="token number">32</span>k<span class="token punctuation">;</span>
+        <span class="token keyword">proxy_busy_buffers_size</span>    <span class="token number">64</span>k<span class="token punctuation">;</span>
+        <span class="token keyword">proxy_temp_file_write_size</span> <span class="token number">64</span>k<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><strong>重启Nginx</strong></p> <div class="language-bash extra-class"><pre class="language-bash"><code>systemctl restart nginx
+</code></pre></div><h2 id="脚本测试"><a href="#脚本测试" aria-hidden="true" class="header-anchor">#</a> 脚本测试</h2> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token shebang important">#!/bin/bash</span>
+<span class="token keyword">for</span><span class="token variable"><span class="token punctuation">((</span>i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span><span class="token number">1000</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">))</span></span><span class="token punctuation">;</span>
+<span class="token keyword">do</span>
+<span class="token function">curl</span> http://localhost:80
+<span class="token keyword">done</span>
+</code></pre></div><p><strong>执行脚本</strong></p> <div class="language-bash extra-class"><pre class="language-bash"><code>sh test.sh
+</code></pre></div></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/linux/shell/docker.html" class="prev">
+          Docker容器
+        </a></span> <span class="next"><a href="/linux/shell/redis.html">
+          Redis消息列队
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/assets/js/app.bdae1179.js" defer></script><script src="/assets/js/9.5a41f4a6.js" defer></script>
+  </body>
+</html>

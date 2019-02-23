@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>一、Docker容器 | WebMIS文档</title>
+    <meta name="description" content="WebMIS基于MVC框架开发的多用户、多权限开源解决方案，整合了Jquery、CodeMirror、TinyMCE、Chart等插件！">
+    <link rel="icon" href="/img/favicon.png">
+    
+    <link rel="preload" href="/assets/css/0.styles.4b94f6ee.css" as="style"><link rel="preload" href="/assets/js/app.bdae1179.js" as="script"><link rel="preload" href="/assets/js/7.daa96e89.js" as="script"><link rel="prefetch" href="/assets/js/10.a879d652.js"><link rel="prefetch" href="/assets/js/11.7f59ed00.js"><link rel="prefetch" href="/assets/js/12.1afa1544.js"><link rel="prefetch" href="/assets/js/13.87cff79d.js"><link rel="prefetch" href="/assets/js/2.b60a0c5f.js"><link rel="prefetch" href="/assets/js/3.b3f7c661.js"><link rel="prefetch" href="/assets/js/4.839be1dd.js"><link rel="prefetch" href="/assets/js/5.db2912be.js"><link rel="prefetch" href="/assets/js/6.436758b7.js"><link rel="prefetch" href="/assets/js/8.7187917d.js"><link rel="prefetch" href="/assets/js/9.5a41f4a6.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.4b94f6ee.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">WebMIS文档</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">主页</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">文档</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux/" class="nav-link router-link-active">Linux文档</a></li><li class="dropdown-item"><!----> <a href="/php/" class="nav-link">PHP文档</a></li><li class="dropdown-item"><!----> <a href="/web/" class="nav-link">Web</a></li></ul></div></div><div class="nav-item"><a href="https://www.github.com/webmiss" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">主页</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title">文档</span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/linux/" class="nav-link router-link-active">Linux文档</a></li><li class="dropdown-item"><!----> <a href="/php/" class="nav-link">PHP文档</a></li><li class="dropdown-item"><!----> <a href="/web/" class="nav-link">Web</a></li></ul></div></div><div class="nav-item"><a href="https://www.github.com/webmiss" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><div class="sidebar-group first"><p class="sidebar-heading open"><span>Shell文档</span> <!----></p> <ul class="sidebar-group-items"><li><a href="/linux/shell/base.html" class="sidebar-link">Shell基础</a></li><li><a href="/linux/shell/tools.html" class="sidebar-link">常用工具</a></li><li><a href="/linux/shell/mysql.html" class="sidebar-link">MariaDB数据库</a></li><li><a href="/linux/shell/docker.html" class="active sidebar-link">Docker容器</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/linux/shell/docker.html#一、docker容器" class="sidebar-link">一、Docker容器</a></li><li class="sidebar-sub-header"><a href="/linux/shell/docker.html#二、案例：ubuntu-nginx服务器" class="sidebar-link">二、案例：Ubuntu+Nginx服务器</a></li><li class="sidebar-sub-header"><a href="/linux/shell/docker.html#三、服务器集群" class="sidebar-link">三、服务器集群</a></li></ul></li><li><a href="/linux/shell/nginx.html" class="sidebar-link">Nginx负载均衡</a></li><li><a href="/linux/shell/redis.html" class="sidebar-link">Redis消息列队</a></li></ul></div></li></ul> </div> <div class="page"> <div class="content"><h2 id="一、docker容器"><a href="#一、docker容器" aria-hidden="true" class="header-anchor">#</a> 一、Docker容器</h2> <p>是一个开源的应用容器引擎，让开发者可以打包他们的应用以及依赖包到一个可移植的容器中，然后发布到任何流行的<code>Linux</code>机器上，也可以实现虚拟化。容器是完全使用沙箱机制，相互之间不会有任何接口。</p> <h3 id="_1-1-安装"><a href="#_1-1-安装" aria-hidden="true" class="header-anchor">#</a> 1.1 安装</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># CentOS</span>
+yum <span class="token function">install</span> docker
+<span class="token comment"># 开机启动</span>
+systemctl <span class="token function">enable</span> docker
+<span class="token comment"># 启动</span>
+systemctl start docker
+</code></pre></div><h3 id="_1-2-镜像管理"><a href="#_1-2-镜像管理" aria-hidden="true" class="header-anchor">#</a> 1.2 镜像管理</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 搜索</span>
+docker search centos
+<span class="token comment"># 下载</span>
+docker pull centos
+<span class="token comment"># 查看</span>
+docker images
+<span class="token comment"># 删除</span>
+docker rmi centos
+</code></pre></div><h3 id="_1-3-运行镜像"><a href="#_1-3-运行镜像" aria-hidden="true" class="header-anchor">#</a> 1.3 运行镜像</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 运行</span>
+docker run -it centos
+
+<span class="token comment"># 运行一个新容器，同时为它命名、端口映射、文件夹映射</span>
+docker run --name redmine -p 9003:80 -p 9023:22 -d -v /var/redmine/files:/redmine/files -v /var/redmine/mysql:/var/lib/mysql centos
+
+<span class="token comment"># 退出并停止</span>
+<span class="token keyword">exit</span>
+
+<span class="token comment"># 如何退出容器而不停止容器？</span>
+Ctrl+P+Q
+</code></pre></div><h3 id="_1-4-容器管理"><a href="#_1-4-容器管理" aria-hidden="true" class="header-anchor">#</a> 1.4 容器管理</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 查看/停止/启动/杀死/移除</span>
+docker <span class="token function">ps</span> -a
+docker stop 容器ID
+docker start 容器ID
+docker <span class="token function">kill</span> 容器ID
+docker <span class="token function">rm</span> 容器ID
+
+<span class="token comment"># 查看容器信息</span>
+docker inspect 容器ID
+
+<span class="token comment"># 进入正在运行的容器</span>
+docker attach 容器ID
+
+<span class="token comment"># 将容器储存为镜像</span>
+docker commit 容器ID 名称
+</code></pre></div><h3 id="_1-5-镜像迁移"><a href="#_1-5-镜像迁移" aria-hidden="true" class="header-anchor">#</a> 1.5 镜像迁移</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 保存</span>
+docker save 镜像名称 <span class="token operator">&gt;</span> /home/save.tar
+<span class="token comment"># 复制的服务器</span>
+<span class="token function">scp</span> /home/save.tar root@IP:/home/
+<span class="token comment"># 导入到镜像</span>
+docker load <span class="token operator">&lt;</span> /home/save.tar
+</code></pre></div><h3 id="_1-6-容器-导出-导入"><a href="#_1-6-容器-导出-导入" aria-hidden="true" class="header-anchor">#</a> 1.6 容器-导出/导入</h3> <div class="language-bash extra-class"><pre class="language-bash"><code>docker <span class="token function">export</span> 容器ID <span class="token operator">&gt;</span> /home/export.tar
+docker <span class="token function">import</span> export.tar
+</code></pre></div><h3 id="_1-7-容器内部文件-拷贝-删除"><a href="#_1-7-容器内部文件-拷贝-删除" aria-hidden="true" class="header-anchor">#</a> 1.7 容器内部文件-拷贝/删除</h3> <div class="language-bash extra-class"><pre class="language-bash"><code>docker <span class="token function">cp</span> 容器ID:路径 ./
+docker <span class="token function">rm</span> 容器ID:路径 ./
+</code></pre></div><h2 id="二、案例：ubuntu-nginx服务器"><a href="#二、案例：ubuntu-nginx服务器" aria-hidden="true" class="header-anchor">#</a> 二、案例：Ubuntu+Nginx服务器</h2> <h3 id="_2-1-下载并运行"><a href="#_2-1-下载并运行" aria-hidden="true" class="header-anchor">#</a> 2.1 下载并运行</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 下载Ubuntu镜像</span>
+docker pull ubuntu
+
+<span class="token comment"># 运行容器</span>
+docker run --privileged<span class="token operator">=</span>true -it --name nginx-ubuntu -v /home/www:/home/www ubuntu /bin/bash
+</code></pre></div><h3 id="_2-2-安装nginx"><a href="#_2-2-安装nginx" aria-hidden="true" class="header-anchor">#</a> 2.2 安装Nginx</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 更新</span>
+apt update
+<span class="token comment"># 安装</span>
+apt <span class="token function">install</span> nginx
+<span class="token comment"># 启动</span>
+<span class="token function">service</span> nginx start
+</code></pre></div><h3 id="_2-3-配置文件"><a href="#_2-3-配置文件" aria-hidden="true" class="header-anchor">#</a> 2.3 配置文件</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 安装vim</span>
+apt <span class="token function">install</span> vim
+<span class="token comment"># 修改虚拟主机存放位置</span>
+<span class="token function">vi</span> /etc/nginx/nginx.conf
+	<span class="token comment"># include /etc/nginx/conf.d/*.conf;</span>
+	<span class="token comment"># include /etc/nginx/sites-enabled/*;</span>
+	include /home/www/nginx-s1/*.conf<span class="token punctuation">;</span>
+<span class="token comment"># 虚拟主机目录</span>
+<span class="token function">mkdir</span> /home/www/nginx-s1/
+<span class="token comment"># 拷贝默认配置文件</span>
+<span class="token function">cp</span> /etc/nginx/sites-enabled/default /home/www/nginx-s1/default.conf
+</code></pre></div><h3 id="_2-4-配置虚拟主机"><a href="#_2-4-配置虚拟主机" aria-hidden="true" class="header-anchor">#</a> 2.4 配置虚拟主机</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">vi</span> /home/www/nginx-s1/default.conf
+</code></pre></div><p><strong>内容如下：</strong></p> <div class="language-nginx extra-class"><pre class="language-nginx"><code><span class="token keyword">server</span> <span class="token punctuation">{</span>
+        <span class="token keyword">listen</span> <span class="token number">80</span> default_server<span class="token punctuation">;</span>
+        <span class="token keyword">listen</span> <span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">:</span><span class="token number">80</span> default_server<span class="token punctuation">;</span>
+
+        <span class="token keyword">server_name</span> localhost<span class="token punctuation">;</span>
+        <span class="token keyword">root</span> <span class="token operator">/</span>home<span class="token operator">/</span>www<span class="token operator">/</span>s1<span class="token operator">/</span><span class="token punctuation">;</span>
+        <span class="token keyword">index</span> <span class="token keyword">index</span><span class="token punctuation">.</span>html<span class="token punctuation">;</span>
+
+        <span class="token keyword">location</span> <span class="token operator">/</span> <span class="token punctuation">{</span>
+                <span class="token keyword">try_files</span> <span class="token variable">$uri</span> <span class="token variable">$uri</span><span class="token operator">/</span> <span class="token operator">=</span><span class="token number">404</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+
+        <span class="token comment"># pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000</span>
+        <span class="token comment">#</span>
+        <span class="token comment">#location ~ \.php$ {</span>
+        <span class="token comment">#       include snippets/fastcgi-php.conf;</span>
+        <span class="token comment">#</span>
+        <span class="token comment">#       # With php7.0-cgi alone:</span>
+        <span class="token comment">#       fastcgi_pass 127.0.0.1:9000;</span>
+        <span class="token comment">#       # With php7.0-fpm:</span>
+        <span class="token comment">#       fastcgi_pass unix:/run/php/php7.0-fpm.sock;</span>
+        <span class="token comment">#}</span>
+
+        <span class="token comment"># deny access to .htaccess files, if Apache's document root</span>
+        <span class="token comment"># concurs with nginx's one</span>
+        <span class="token comment">#</span>
+        <span class="token keyword">location</span> <span class="token operator">~</span> <span class="token operator">/</span>\<span class="token punctuation">.</span>ht <span class="token punctuation">{</span>
+                <span class="token keyword">deny</span> all<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><strong>创建网站目录</strong></p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 网站目录</span>
+<span class="token function">mkdir</span> /home/www/s1
+<span class="token comment"># 测试文件</span>
+<span class="token keyword">echo</span> <span class="token string">'&lt;h1&gt;Server1&lt;/h1&gt;'</span> <span class="token operator">&gt;</span> /home/www/s1/index.html
+<span class="token comment"># 重启服务</span>
+<span class="token function">service</span> nginx restart
+</code></pre></div><h3 id="_2-5-安装ssh"><a href="#_2-5-安装ssh" aria-hidden="true" class="header-anchor">#</a> 2.5 安装SSH</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 安装</span>
+apt <span class="token function">install</span> openssh-server
+<span class="token comment"># 启动</span>
+<span class="token function">service</span> <span class="token function">ssh</span> start
+
+<span class="token comment"># 无法链接</span>
+<span class="token function">vi</span> /etc/ssh/sshd_config
+	PermitRootLogin <span class="token function">yes</span>
+	UsePAM no
+</code></pre></div><h3 id="_2-6-如何退出容器而不停止容器？"><a href="#_2-6-如何退出容器而不停止容器？" aria-hidden="true" class="header-anchor">#</a> 2.6 如何退出容器而不停止容器？</h3> <div class="language-bash extra-class"><pre class="language-bash"><code>Ctrl+P+Q
+</code></pre></div><h3 id="_2-7-将容器储存为镜像"><a href="#_2-7-将容器储存为镜像" aria-hidden="true" class="header-anchor">#</a> 2.7 将容器储存为镜像</h3> <div class="language-bash extra-class"><pre class="language-bash"><code>docker commit 容器ID ubuntu-server
+</code></pre></div><h3 id="_2-8-运行容器"><a href="#_2-8-运行容器" aria-hidden="true" class="header-anchor">#</a> 2.8 运行容器</h3> <div class="language-bash extra-class"><pre class="language-bash"><code>docker run --privileged<span class="token operator">=</span>true -it --name ubuntu-s1 -v /home/www:/home/www  -p 8081:80 ubuntu-server /bin/bash
+
+<span class="token comment"># 启动Nginx</span>
+<span class="token function">service</span> nginx start
+
+<span class="token comment"># 退出容器命令行</span>
+Ctrl+P+Q
+</code></pre></div><h3 id="_2-9-测试容器"><a href="#_2-9-测试容器" aria-hidden="true" class="header-anchor">#</a> 2.9 测试容器</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 查看容器ID</span>
+docker <span class="token function">ps</span> -a
+<span class="token comment"># 查看容器IP地址</span>
+ip address
+<span class="token comment"># 测试网站服务器</span>
+<span class="token function">curl</span> http://172.17.0.1:8081
+</code></pre></div><h2 id="三、服务器集群"><a href="#三、服务器集群" aria-hidden="true" class="header-anchor">#</a> 三、服务器集群</h2> <p><strong>制作三台服务器</strong></p> <ul><li>1.进入nginx-ubuntu</li> <li>2.修改Nginx</li> <li>3.将容器储存为镜像</li> <li>4.运行容器</li> <li>5.测试结果</li></ul></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/linux/shell/mysql.html" class="prev">
+          MariaDB数据库
+        </a></span> <span class="next"><a href="/linux/shell/nginx.html">
+          Nginx负载均衡
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/assets/js/app.bdae1179.js" defer></script><script src="/assets/js/7.daa96e89.js" defer></script>
+  </body>
+</html>
